@@ -1,5 +1,5 @@
 {
-  "name": "kib_document_events",
+  "name": "kib-document-events",
   "version": "2.0.0",
   "description": "A lightweight utility for managing document and window events with debouncing, throttling, and cleanup.",
   "main": "index.js",
