@@ -369,14 +369,8 @@ class KibDocumentEvents {
   }
 }
 
-// Create singleton instance
+// Create and export singleton instance
 const docEvents = new KibDocumentEvents();
 
-// Export for different module systems
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = docEvents;
-} else if (typeof define === "function" && define.amd) {
-  define([], () => docEvents);
-} else {
-  window.DocumentEvents = docEvents;
-}
+export default docEvents;
+export { KibDocumentEvents };
