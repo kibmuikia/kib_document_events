@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KibDocumentEvents - Basic Usage</title>
+</head>
+<body>
+    <h1>KibDocumentEvents Example</h1>
+    <div id="output"></div>
+    
+    <script type="module">
+        import docEvents from '../index.js';
+        
+        const output = document.getElementById('output');
+        
+        // DOM ready
+        docEvents.ready(() => {
+            output.innerHTML += '<p>DOM is ready!</p>';
+        });
+        
+        // Keyboard events
+        docEvents.onKeyboard((combo) => {
+            if (combo.ctrl && combo.key === 's') {
+                combo.preventDefault();
+                output.innerHTML += '<p>Ctrl+S pressed!</p>';
+            }
+        });
+        
+        // Scroll events
+        docEvents.onScroll((scroll) => {
+            output.innerHTML = `<p>Scroll: x=${scroll.x}, y=${scroll.y}</p>`;
+        });
+        
+        // Focus events
+        docEvents.onFocusChange((hasFocus) => {
+            output.innerHTML += `<p>Window ${hasFocus ? 'focused' : 'blurred'}</p>`;
+        });
+        
+        // Get current state
+        console.log('Current state:', docEvents.getState());
+    </script>
+</body>
+</html>
