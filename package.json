@@ -1,0 +1,23 @@
+{
+  "name": "kib_document_events",
+  "version": "1.0.0",
+  "description": "A lightweight utility for managing document and window events with debouncing, throttling, and cleanup.",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "events",
+    "document",
+    "window",
+    "javascript",
+    "utility",
+    "singleton"
+  ],
+  "author": "kibmuikia",
+  "license": "MIT"
+}
