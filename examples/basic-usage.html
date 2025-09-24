@@ -36,7 +36,7 @@
   <body class="bg-base-100">
     <div class="min-h-screen">
       <!-- Header -->
-      <div class="navbar bg-base-200 shadow-lg">
+      <div class="navbar bg-base-200 shadow-lg sticky top-0 z-50">
         <div class="flex-1">
           <h1 class="text-xl font-bold">
             <i class="fas fa-bolt text-primary mr-2"></i>
@@ -63,7 +63,9 @@
 
       <div class="container mx-auto px-4 py-8">
         <!-- Status Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 sticky top-16 z-40 bg-base-100 py-2"
+        >
           <div class="stat bg-base-200 rounded-box">
             <div class="stat-figure text-primary">
               <i class="fas fa-eye text-2xl"></i>
