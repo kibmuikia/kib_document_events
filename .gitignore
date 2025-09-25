@@ -2,3 +2,4 @@
 tree.txt
 node_modules
 package-lock.json
+.DS_Store
